@@ -25,11 +25,11 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
     return variantPrice || cheapestPrice || null
   }, [price])
 
-  const [isDescriptionVisible, setDescriptionVisible] = useState(false)
+  // const [isDescriptionVisible, setDescriptionVisible] = useState(false)
 
-  const toggleDescriptionVisibility = () => {
-    setDescriptionVisible(!isDescriptionVisible)
-  }
+  // const toggleDescriptionVisibility = () => {
+  //   setDescriptionVisible(!isDescriptionVisible)
+  // }
 
   return (
     <div className="flex flex-col gap-y-2">
@@ -45,20 +45,20 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
 
       <p className="text-base-regular text-justify">{product.description}</p>
 
-      <p className="text-base-regular text-justify">
+      {/* <p className="text-base-regular text-justify">
         {isDescriptionVisible &&
         product.metadata &&
         typeof product.metadata.resume === "string"
           ? product.metadata.resume
           : ""}
-      </p>
+      </p> */}
 
-      <button
+      {/* <button
         className="text-sm text-gray-700 hover:underline"
         onClick={toggleDescriptionVisibility}
       >
         {isDescriptionVisible ? "Cerrar" : "Más info"}
-      </button>
+      </button> */}
 
       {product.variants.length > 1 && (
         <div className="my-8 flex flex-col gap-y-6">
