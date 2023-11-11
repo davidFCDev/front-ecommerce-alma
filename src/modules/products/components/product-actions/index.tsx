@@ -45,11 +45,13 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
 
       <p className="text-base-regular text-justify">{product.description}</p>
 
-      <p className="text-base-regular text-justify">
-        {isDescriptionVisible && product.metadata
-          ? product.metadata.resume
-          : ""}
-      </p>
+      {isDescriptionVisible &&
+      product.metadata &&
+      typeof product.metadata.resume === "string" ? (
+        <p className="text-base-regular text-justify">
+          {product.metadata.resume}
+        </p>
+      ) : null}
 
       <button
         className="text-sm text-gray-700 hover:underline"
