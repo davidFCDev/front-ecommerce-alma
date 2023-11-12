@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
 }
 
-/** Underline Nav */
+/** Underline Navbar */
 
 .underline-hover::after {
   content: "";
