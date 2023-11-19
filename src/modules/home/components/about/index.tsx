@@ -25,10 +25,10 @@ const About = () => {
   const [ref7, inView7] = useInView({ threshold: 0.6, triggerOnce: true })
 
   return (
-    <div className="mt-16 small:mt-32 w-full py-16 small:py-32 flex flex-col items-center gap-5 small:gap-10 text-justify text-gray-900 bg-stone-50">
-      <div className="flex flex-col mb-10 small:mb-32 gap-10 small:gap-16 text-xl-regular text-gray-900 px-16 small:px-32">
+    <div className="mt-16 small:mt-32 w-full py-10 small:py-32 flex flex-col items-center gap-5 small:gap-10 text-justify text-gray-900 bg-stone-50">
+      <div className="flex flex-col mb-10 small:mb-32 gap-10 small:gap-16 text-xl-regular text-gray-900 px-10 small:px-32">
         <span className="text-sm small:text-base text-purple-700 mb-6 font-semibold tracking-wide italic text-center">
-          ¿Quieres saber más sobre nosotros?
+          ¿Quiénes somos?
         </span>
 
         <div className="flex flex-col small:flex-row gap-16 small:gap-20">
@@ -36,7 +36,7 @@ const About = () => {
             animate={inView1 ? animationOptions : {}}
             initial={{ opacity: 0, y: 50 }}
             ref={ref1}
-            className="flex flex-col gap-4 small:gap-6"
+            className="flex flex-col gap-2 small:gap-6"
           >
             <div className="flex items-center gap-3 small:gap-5 justify-center small:justify-start">
               <img
@@ -46,7 +46,7 @@ const About = () => {
               />
               <h2 className="text-2xl small:text-3xl font-bold">Nosotros</h2>
             </div>
-            <p className="font-light text-base small:text-lg leading-6 small:leading-8">
+            <p className="font-light text-base small:text-lg leading-7 small:leading-8">
               Una pequeña tienda esotérica donde encontrarás velas de cera de
               soja cargadas de energía gracias a sus minerales y plantas
               aromáticas, además de minerales, sahumerios y mucho más.
@@ -57,7 +57,7 @@ const About = () => {
             animate={inView2 ? animationOptions : {}}
             initial={{ opacity: 0, y: 50 }}
             ref={ref2}
-            className="flex flex-col gap-4 small:gap-6"
+            className="flex flex-col gap-2 small:gap-6"
           >
             <div className="flex items-center gap-3 small:gap-5 justify-center small:justify-start">
               <img
@@ -67,7 +67,7 @@ const About = () => {
               />
               <h2 className="text-2xl small:text-3xl font-bold">Te guiamos</h2>
             </div>
-            <p className="font-light text-base small:text-lg leading-6 small:leading-8">
+            <p className="font-light text-base small:text-lg leading-7 small:leading-8">
               Puedes contar con nuestra ayuda y asesoramiento para guiarte en la
               elección de los productos.
             </p>
@@ -77,7 +77,7 @@ const About = () => {
             animate={inView3 ? animationOptions : {}}
             initial={{ opacity: 0, y: 50 }}
             ref={ref3}
-            className="flex flex-col gap-4 small:gap-6"
+            className="flex flex-col gap-2 small:gap-6"
           >
             <div className="flex items-center gap-3 small:gap-5 justify-center small:justify-start">
               <img
@@ -87,7 +87,7 @@ const About = () => {
               />
               <h2 className="text-2xl small:text-3xl font-bold">Workshop</h2>
             </div>
-            <p className="font-light text-base small:text-lg leading-6 small:leading-8">
+            <p className="font-light text-base small:text-lg leading-7 small:leading-8">
               También ofrecemos otros servicios como nuestro taller vela para el
               alma en el que crearás desde cero tu propia vela.
             </p>
@@ -99,7 +99,7 @@ const About = () => {
         <img
           src="/banner-velas.jpg"
           alt="banner de velas"
-          className="w-[75%] shadow-md"
+          className="w-[80%] min-h-[80px] small:w-[75%] shadow-md"
         />
         <motion.h2
           animate={inView4 ? animationOptions2 : {}}
@@ -115,7 +115,7 @@ const About = () => {
         <img
           src="/banner-minerales.jpg"
           alt="banner de piedras / minerales"
-          className="w-[75%] shadow-md"
+          className="w-[80%] min-h-[80px] small:w-[75%] shadow-md"
         />
         <motion.h2
           animate={inView5 ? animationOptions2 : {}}
@@ -131,7 +131,7 @@ const About = () => {
         <img
           src="/banner-sahumerios.jpg"
           alt="banner de sahumerios"
-          className="w-[75%] shadow-md"
+          className="w-[80%] min-h-[80px] small:w-[75%] shadow-md"
         />
         <motion.h2
           animate={inView6 ? animationOptions2 : {}}
@@ -147,7 +147,7 @@ const About = () => {
         <img
           src="/banner-saquitos.jpg"
           alt="banner de costura"
-          className="w-[75%] shadow-md"
+          className="w-[80%] min-h-[80px] small:w-[75%] shadow-md"
         />
         <motion.h2
           animate={inView7 ? animationOptions2 : {}}

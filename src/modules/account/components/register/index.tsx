@@ -118,13 +118,13 @@ const Register = () => {
         )}
         <span className="text-center text-gray-700 text-small-regular mt-6">
           Al crear una cuenta, aceptas nuestros términos y condiciones{" "}
-          <Link href="/content/privacy-policy" className="underline">
+          <Link href="/contact" className="underline">
             Política de Privacidad
           </Link>{" "}
-          y{" "}
+          {/* y{" "}
           <Link href="/content/terms-of-use" className="underline">
             Términos de Uso
-          </Link>
+          </Link> */}
           .
         </span>
         <Button className="mt-6">Únete</Button>

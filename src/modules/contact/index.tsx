@@ -2,8 +2,8 @@
 
 const Contact = () => {
   return (
-    <div className="w-full flex flex-col text-gray-900 bg-white text-justify mb-16">
-      <div className="px-[10rem] py-[4rem] flex flex-col gap-8">
+    <div className="w-full flex flex-col text-gray-900 bg-white small:text-justify mb-16">
+      <div className="px-6 small:px-[10rem] py-[4rem] flex flex-col gap-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-10 uppercase">Política de privacidad y envíos</h1>
 
         <p className="text-base">

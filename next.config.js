@@ -14,9 +14,9 @@ module.exports = withStoreConfig({
   images: {
     domains: [
       "alma-ecommerce.s3.eu-west-3.amazonaws.com",
-      // "medusa-public-images.s3.eu-west-1.amazonaws.com",
+      "medusa-public-images.s3.eu-west-1.amazonaws.com",
       "localhost",
-      // "medusa-server-testing.s3.amazonaws.com",
+      "medusa-server-testing.s3.amazonaws.com",
     ],
   },
 })

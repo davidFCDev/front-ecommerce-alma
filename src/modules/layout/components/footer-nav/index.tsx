@@ -17,7 +17,7 @@ const FooterNav = () => {
           </Link>
           <p className="underline text-sm small:text-base">info@lafuerzadelalma.com</p>
           <p className="text-sm small:text-base">Whatsapp: +34 626 88 98 80</p>
-          <p className="text-sm small:text-base">Mataró,Barcelona</p>
+          <p className="text-sm small:text-base">Mataró, Barcelona</p>
         </div>
 
         {collections && (
