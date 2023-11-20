@@ -19,7 +19,7 @@ const Hero = () => {
         animate={inView ? animationOptions : {}}
         initial={{ opacity: 0 }}
         ref={ref}
-        className="text-white absolute inset-0 z-10 pb-32 small:pb-0 flex flex-col items-center text-center small:text-left justify-end small:items-start small:px-32 small:py-20"
+        className="text-white absolute inset-0 z-10 pb-32 flex flex-col items-center text-center small:text-left justify-end small:items-start small:px-32 small:py-20"
       >
         <h1 className="text-4xl small:text-5xl mb-4 drop-shadow-md shadow-black uppercase font-bold">
           Alma, cuerpo y mente
