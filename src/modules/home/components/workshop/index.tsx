@@ -3,7 +3,7 @@
 
 const Workshop = () => {
   return (
-    <div className="w-full mt-16 small:mt-24 mb-32 small:mb-44 py-10 bg-left-to-right">
+    <div className="w-full mt-16 small:mt-24 mb-32 small:mb-44 py-10 bg-left-to-right bg-neutral-100">
       <div className="content-container flex flex-col-reverse gap-16 small:flex-row small:items-center justify-center py-10 relative">
         <div className="flex flex-col text-xl-regular text-gray-900 small:max-w-[45%] gap-6 small:gap-10">
           <span className="text-sm small:text-base text-purple-700 mb-6 font-semibold tracking-wide italic text-center">

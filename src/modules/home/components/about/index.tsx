@@ -23,9 +23,10 @@ const About = () => {
   const [ref5, inView5] = useInView({ threshold: 0.6, triggerOnce: true })
   const [ref6, inView6] = useInView({ threshold: 0.6, triggerOnce: true })
   const [ref7, inView7] = useInView({ threshold: 0.6, triggerOnce: true })
+  const [ref8, inView8] = useInView({ threshold: 0.6, triggerOnce: true })
 
   return (
-    <div className="mt-16 small:mt-32 w-full py-10 small:py-32 flex flex-col items-center gap-5 small:gap-10 text-justify text-gray-900 bg-stone-50">
+    <div className="mt-12 small:mt-10 w-full py-10 small:py-32 flex flex-col items-center gap-5 small:gap-10 text-justify text-gray-900 bg-white">
       <div className="flex flex-col mb-10 small:mb-32 gap-10 small:gap-16 text-xl-regular text-gray-900 px-10 small:px-32">
         <span className="text-sm small:text-base text-purple-700 mb-6 font-semibold tracking-wide italic text-center">
           ¿Quiénes somos?
@@ -47,9 +48,9 @@ const About = () => {
               <h2 className="text-2xl small:text-3xl font-bold">Nosotros</h2>
             </div>
             <p className="font-light text-base small:text-lg leading-7 small:leading-8">
-              Una pequeña tienda esotérica donde encontrarás velas de cera de
-              soja cargadas de energía gracias a sus minerales y plantas
-              aromáticas, además de minerales, sahumerios y mucho más.
+              Somos una pequeña tienda esotérica donde encontrarás velas de cera
+              de soja cargadas de energía gracias a sus minerales y plantas
+              aromáticas, además de bisutería, sahumerios y mucho más.
             </p>
           </motion.div>
 
@@ -95,67 +96,83 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse small:flex-row gap-5 items-start small:items-center">
+      <div className="flex flex-col-reverse small:flex-row gap-5 justify-between w-full items-start small:items-center">
         <img
-          src="/banner-velas.jpg"
+          src="/banner-velas.webp"
           alt="banner de velas"
-          className="w-[80%] min-h-[80px] small:w-[75%] shadow-md"
+          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
         />
         <motion.h2
           animate={inView4 ? animationOptions2 : {}}
           initial={{ opacity: 0, x: 50 }}
           ref={ref4}
-          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700"
+          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
         >
           Velas
         </motion.h2>
       </div>
 
-      <div className="flex flex-col-reverse small:flex-row-reverse gap-5 items-end small:items-center">
+      <div className="flex flex-col-reverse small:flex-row-reverse justify-between w-full gap-5 items-end small:items-center">
         <img
-          src="/banner-minerales.jpg"
-          alt="banner de piedras / minerales"
-          className="w-[80%] min-h-[80px] small:w-[75%] shadow-md"
+          src="/banner-sahumerios.webp"
+          alt="banner de sahumerios"
+          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
         />
         <motion.h2
           animate={inView5 ? animationOptions2 : {}}
           initial={{ opacity: 0, x: -50 }}
           ref={ref5}
-          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700"
-        >
-          Minerales
-        </motion.h2>
-      </div>
-
-      <div className="flex flex-col-reverse small:flex-row gap-5 items-start small:items-center">
-        <img
-          src="/banner-sahumerios.jpg"
-          alt="banner de sahumerios"
-          className="w-[80%] min-h-[80px] small:w-[75%] shadow-md"
-        />
-        <motion.h2
-          animate={inView6 ? animationOptions2 : {}}
-          initial={{ opacity: 0, x: 50 }}
-          ref={ref6}
-          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700"
+          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
         >
           Sahumerios
         </motion.h2>
       </div>
 
-      <div className="flex flex-col-reverse small:flex-row-reverse gap-5 items-end small:items-center">
+      <div className="flex flex-col-reverse small:flex-row justify-between w-full gap-5 items-start small:items-center">
         <img
-          src="/banner-saquitos.jpg"
-          alt="banner de costura"
-          className="w-[80%] min-h-[80px] small:w-[75%] shadow-md"
+          src="/banner-bisuteria.webp"
+          alt="banner de bisuteria"
+          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
+        />
+        <motion.h2
+          animate={inView6 ? animationOptions2 : {}}
+          initial={{ opacity: 0, x: 50 }}
+          ref={ref6}
+          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
+        >
+          Bisutería
+        </motion.h2>
+      </div>
+
+      <div className="flex flex-col-reverse small:flex-row-reverse justify-between w-full gap-5 items-end small:items-center">
+        <img
+          src="/banner-incienso.webp"
+          alt="banner de incienso"
+          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
         />
         <motion.h2
           animate={inView7 ? animationOptions2 : {}}
           initial={{ opacity: 0, x: -50 }}
           ref={ref7}
-          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700"
+          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
         >
-          y mucho más...
+          Inciensos
+        </motion.h2>
+      </div>
+
+      <div className="flex flex-col-reverse small:flex-row justify-between w-full gap-5 items-start small:items-center">
+        <img
+          src="/banner-workshop.webp"
+          alt="banner de workshop"
+          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
+        />
+        <motion.h2
+          animate={inView8 ? animationOptions2 : {}}
+          initial={{ opacity: 0, x: 50 }}
+          ref={ref8}
+          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
+        >
+          Workshop
         </motion.h2>
       </div>
     </div>

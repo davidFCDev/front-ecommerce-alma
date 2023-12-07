@@ -9,6 +9,23 @@ body {
   overflow-x: hidden;
 }
 
+/** Gradient */
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+}
+
 /** Underline Navbar */
 
 .underline-hover::after {
@@ -134,19 +151,19 @@ body {
 }
 
 .underline-link {
-  background: rgb(126, 34, 206);
+  background: #8354A9;
   background: linear-gradient(
     90deg,
-    rgb(168, 98, 229) 0%,
-    rgb(168, 98, 229) 76%
+    #8354A9 0%,
+    #8354A9 76%
   );
 }
 
 .underline-link:hover {
-  background: rgb(126, 34, 206);
+  background: #AA7DCE;
   background: linear-gradient(
     90deg,
-    rgb(140, 62, 208) 0%,
-    rgb(140, 62, 208) 76%
+    #AA7DCE 0%,
+    #AA7DCE 76%
   );
 }
