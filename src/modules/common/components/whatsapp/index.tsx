@@ -12,7 +12,7 @@ const ContactButtom = () => {
       <img
         src="/whats-icono.png"
         alt="icono de whatsapp"
-        className="w-12 h-12 small:w-16 small:h-16 hover:scale-105 transform transition-all duration-300"
+        className="w-10 h-10 small:w-16 small:h-16 hover:scale-105 transform transition-all duration-300"
       />
     </Link>
   )

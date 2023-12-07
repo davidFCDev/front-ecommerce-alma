@@ -3,16 +3,18 @@
 "use client"
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
+import AboutText from "./about-text"
 
 const About = () => {
-  const animationOptions = {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1.2 },
-  }
   const animationOptions2 = {
     opacity: 1,
     x: 0,
+    transition: { duration: 1.2 },
+  }
+
+  const animationOptions3 = {
+    opacity: 1,
+    y: 0,
     transition: { duration: 1.2 },
   }
 
@@ -26,154 +28,156 @@ const About = () => {
   const [ref8, inView8] = useInView({ threshold: 0.6, triggerOnce: true })
 
   return (
-    <div className="mt-12 small:mt-10 w-full py-10 small:py-32 flex flex-col items-center gap-5 small:gap-10 text-justify text-gray-900 bg-white">
-      <div className="flex flex-col mb-10 small:mb-32 gap-10 small:gap-16 text-xl-regular text-gray-900 px-10 small:px-32">
-        <span className="text-sm small:text-base text-purple-700 mb-6 font-semibold tracking-wide italic text-center">
-          ¿Quiénes somos?
-        </span>
+    <div className="mt-12 small:mt-10 w-full py-10 small:py-20 flex flex-col items-center gap-16 small:gap-10 text-justify text-gray-900 bg-white overflow-x-hidden">
+      <AboutText />
 
-        <div className="flex flex-col small:flex-row gap-16 small:gap-20">
-          <motion.div
-            animate={inView1 ? animationOptions : {}}
-            initial={{ opacity: 0, y: 50 }}
+      <div className="flex flex-col gap-8 small:gap-16 w-full">
+        <div className="flex flex-col-reverse small:flex-row items-start small:items-center gap-5 xsmall:gap-10 small:gap-0">
+          {/* Desktop */}
+          <img
+            src="/banner-velas.webp"
+            alt="banner de velas"
+            className="small:w-3/4 w-[90%] object-contain shadow-md small:shadow-lg hidden small:block"
+          />
+          {/* Responsive */}
+          <img
+            src="/banner-velas-responsive.webp"
+            alt="banner de velas"
+            className="small:w-3/4 w-[90%] object-contain shadow-md small:shadow-lg block small:hidden"
+          />
+          <motion.h2
+            animate={inView1 ? animationOptions2 : {}}
+            initial={{ opacity: 0, x: 50 }}
             ref={ref1}
-            className="flex flex-col gap-2 small:gap-6"
+            className="uppercase pl-10 small:pl-0 text-left small:text-center text-xl small:text-3xl tracking-widest text-gray-700 font-semibold w-full"
           >
-            <div className="flex items-center gap-3 small:gap-5 justify-center small:justify-start">
-              <img
-                src="/tarot-icono.png"
-                alt="icono de tarot"
-                className="w-8 pb-3 small:pb-0 small:w-10"
-              />
-              <h2 className="text-2xl small:text-3xl font-bold">Nosotros</h2>
-            </div>
-            <p className="font-light text-base small:text-lg leading-7 small:leading-8">
-              Somos una pequeña tienda esotérica donde encontrarás velas de cera
-              de soja cargadas de energía gracias a sus minerales y plantas
-              aromáticas, además de bisutería, sahumerios y mucho más.
-            </p>
-          </motion.div>
+            Velas
+          </motion.h2>
+        </div>
 
-          <motion.div
-            animate={inView2 ? animationOptions : {}}
-            initial={{ opacity: 0, y: 50 }}
+        <div className="flex flex-col-reverse small:flex-row-reverse items-end small:items-center gap-5 xsmall:gap-10 small:gap-0">
+          {/* Desktop */}
+          <img
+            src="/banner-sahumerios.webp"
+            alt="banner de sahumerios"
+            className="small:w-3/4 w-[90%] object-contain shadow-md small:shadow-lg hidden small:block"
+          />
+          {/* Responsive */}
+          <img
+            src="/banner-sahumerios-responsive.webp"
+            alt="banner de sahumerios"
+            className="small:w-3/4 w-[90%] object-contain shadow-md small:shadow-lg block small:hidden"
+          />
+          <motion.h2
+            animate={inView2 ? animationOptions2 : {}}
+            initial={{ opacity: 0, x: -50 }}
             ref={ref2}
-            className="flex flex-col gap-2 small:gap-6"
+            className="uppercase pr-10 small:pr-0 text-right small:text-center text-xl small:text-3xl tracking-widest text-gray-700 font-semibold w-full"
           >
-            <div className="flex items-center gap-3 small:gap-5 justify-center small:justify-start">
-              <img
-                src="/ojo-icono.png"
-                alt="icono de esoterismo"
-                className="w-8 pb-3 small:pb-0 small:w-10"
-              />
-              <h2 className="text-2xl small:text-3xl font-bold">Te guiamos</h2>
-            </div>
-            <p className="font-light text-base small:text-lg leading-7 small:leading-8">
-              Puedes contar con nuestra ayuda y asesoramiento para guiarte en la
-              elección de los productos.
-            </p>
-          </motion.div>
+            Sahumerios
+          </motion.h2>
+        </div>
 
-          <motion.div
-            animate={inView3 ? animationOptions : {}}
+        {/* Desktop */}
+        <div className="hidden small:flex flex-row items-center gap-0">
+          <img
+            src="/banner-bisuteria.webp"
+            alt="banner de bisuteria"
+            className="w-2/5 shadow-md small:shadow-lg"
+          />
+          <motion.h2
+            animate={inView3 ? animationOptions3 : {}}
             initial={{ opacity: 0, y: 50 }}
             ref={ref3}
-            className="flex flex-col gap-2 small:gap-6"
+            className="uppercase small:pr-0 text-right small:text-center text-xl small:text-3xl tracking-widest text-gray-700 font-semibold w-full"
           >
-            <div className="flex items-center gap-3 small:gap-5 justify-center small:justify-start">
-              <img
-                src="/vela-icono.png"
-                alt="icono de velas"
-                className="w-8 pb-3 small:pb-0 small:w-10"
-              />
-              <h2 className="text-2xl small:text-3xl font-bold">Workshop</h2>
-            </div>
-            <p className="font-light text-base small:text-lg leading-7 small:leading-8">
-              También ofrecemos otros servicios como nuestro taller vela para el
-              alma en el que crearás desde cero tu propia vela.
-            </p>
-          </motion.div>
+            Bisutería
+          </motion.h2>
+          <img
+            src="/banner-bisuteria2.webp"
+            alt="banner de bisuteria"
+            className="w-2/5 shadow-md small:shadow-lg"
+          />
         </div>
-      </div>
 
-      <div className="flex flex-col-reverse small:flex-row gap-5 justify-between w-full items-start small:items-center">
-        <img
-          src="/banner-velas.webp"
-          alt="banner de velas"
-          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
-        />
-        <motion.h2
-          animate={inView4 ? animationOptions2 : {}}
-          initial={{ opacity: 0, x: 50 }}
-          ref={ref4}
-          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
-        >
-          Velas
-        </motion.h2>
-      </div>
+        {/* Responsive */}
+        <div className="flex small:hidden flex-col-reverse small:flex-row items-start small:items-center gap-5 xsmall:gap-10 small:gap-0">
+          <img
+            src="/banner-bisuteria-responsive.webp"
+            alt="banner de bisuteria"
+            className="small:w-3/4 w-[90%] h-full object-contain shadow-md small:shadow-lg"
+          />
+          <motion.h2
+            animate={inView4 ? animationOptions2 : {}}
+            initial={{ opacity: 0, x: 50 }}
+            ref={ref4}
+            className="uppercase pl-10 small:pl-0 text-left small:text-center text-xl small:text-3xl tracking-widest text-gray-700 font-semibold w-full"
+          >
+            Bisutería
+          </motion.h2>
+        </div>
 
-      <div className="flex flex-col-reverse small:flex-row-reverse justify-between w-full gap-5 items-end small:items-center">
-        <img
-          src="/banner-sahumerios.webp"
-          alt="banner de sahumerios"
-          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
-        />
-        <motion.h2
-          animate={inView5 ? animationOptions2 : {}}
-          initial={{ opacity: 0, x: -50 }}
-          ref={ref5}
-          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
-        >
-          Sahumerios
-        </motion.h2>
-      </div>
+        <div className="flex flex-col-reverse small:flex-row items-end small:items-center gap-5 xsmall:gap-10 small:gap-0">
+          {/* Desktop */}
+          <img
+            src="/banner-workshop.webp"
+            alt="banner de workshop"
+            className="small:w-3/4 w-[90%] object-contain shadow-md small:shadow-lg hidden small:block"
+          />
+          <motion.h2
+            animate={inView5 ? animationOptions2 : {}}
+            initial={{ opacity: 0, x: 50 }}
+            ref={ref5}
+            className="uppercase pr-10 small:pr-0 text-right small:text-center text-xl small:text-3xl tracking-widest text-gray-700 font-semibold w-full hidden small:block"
+          >
+            Workshop
+          </motion.h2>
+          {/* Responsive */}
+          <img
+            src="/banner-workshop-responsive.webp"
+            alt="banner de workshop"
+            className="small:w-3/4 w-[90%] object-contain shadow-md small:shadow-lg block small:hidden"
+          />
+          <motion.h2
+            animate={inView6 ? animationOptions2 : {}}
+            initial={{ opacity: 0, x: -50 }}
+            ref={ref6}
+            className="uppercase pr-10 small:pr-0 text-right small:text-center text-xl small:text-3xl tracking-widest text-gray-700 font-semibold w-full block small:hidden"
+          >
+            Workshop
+          </motion.h2>
+        </div>
 
-      <div className="flex flex-col-reverse small:flex-row justify-between w-full gap-5 items-start small:items-center">
-        <img
-          src="/banner-bisuteria.webp"
-          alt="banner de bisuteria"
-          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
-        />
-        <motion.h2
-          animate={inView6 ? animationOptions2 : {}}
-          initial={{ opacity: 0, x: 50 }}
-          ref={ref6}
-          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
-        >
-          Bisutería
-        </motion.h2>
-      </div>
-
-      <div className="flex flex-col-reverse small:flex-row-reverse justify-between w-full gap-5 items-end small:items-center">
-        <img
-          src="/banner-incienso.webp"
-          alt="banner de incienso"
-          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
-        />
-        <motion.h2
-          animate={inView7 ? animationOptions2 : {}}
-          initial={{ opacity: 0, x: -50 }}
-          ref={ref7}
-          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
-        >
-          Inciensos
-        </motion.h2>
-      </div>
-
-      <div className="flex flex-col-reverse small:flex-row justify-between w-full gap-5 items-start small:items-center">
-        <img
-          src="/banner-workshop.webp"
-          alt="banner de workshop"
-          className="w-[80%] max-h-72 small:w-full shadow-md small:shadow-lg"
-        />
-        <motion.h2
-          animate={inView8 ? animationOptions2 : {}}
-          initial={{ opacity: 0, x: 50 }}
-          ref={ref8}
-          className="uppercase px-20 text-base small:text-xl tracking-widest text-gray-700 font-semibold"
-        >
-          Workshop
-        </motion.h2>
+        <div className="flex flex-col-reverse small:flex-row-reverse items-start small:items-center gap-5 xsmall:gap-10 small:gap-0">
+          {/* Desktop */}
+          <img
+            src="/banner-incienso.webp"
+            alt="banner de incienso"
+            className="small:w-3/4 w-[90%] object-contain shadow-md small:shadow-lg hidden small:block"
+          />
+          <motion.h2
+            animate={inView7 ? animationOptions2 : {}}
+            initial={{ opacity: 0, x: -50 }}
+            ref={ref7}
+            className="uppercase pl-10 small:pl-0 text-left small:text-center text-xl small:text-3xl tracking-widest text-gray-700 font-semibold w-full hidden small:block"
+          >
+            Inciensos
+          </motion.h2>
+          {/* Responsive */}
+          <img
+            src="/banner-incienso-responsive.webp"
+            alt="banner de incienso"
+            className="small:w-3/4 w-[90%] object-contssain shadow-md small:shadow-lg block small:hidden"
+          />
+          <motion.h2
+            animate={inView8 ? animationOptions2 : {}}
+            initial={{ opacity: 0, x: 50 }}
+            ref={ref8}
+            className="uppercase pl-10 small:pl-0 text-left small:text-center text-xl small:text-3xl tracking-widest text-gray-700 font-semibold w-full block small:hidden"
+          >
+            Inciensos
+          </motion.h2>
+        </div>
       </div>
     </div>
   )

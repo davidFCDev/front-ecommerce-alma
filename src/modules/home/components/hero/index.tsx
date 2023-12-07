@@ -19,7 +19,7 @@ const Hero = () => {
         animate={inView ? animationOptions : {}}
         initial={{ opacity: 0 }}
         ref={ref}
-        className="text-white absolute inset-0 z-20 pb-32 flex flex-col text-left justify-end items-center small:items-start small:px-32 small:py-20"
+        className="text-white absolute inset-0 z-20 flex flex-col text-left justify-end items-start small:items-start pb-20 pl-10 small:px-32 small:py-20"
       >
         <div className="flex flex-col">
           <h1 className="text-4xl small:text-5xl drop-shadow-md shadow-black uppercase font-bold tracking-wide">

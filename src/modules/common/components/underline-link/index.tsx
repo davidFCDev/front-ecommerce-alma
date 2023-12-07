@@ -11,7 +11,7 @@ const UnderlineLink = ({ href, children }: UnderlineLinkProps) => {
     <div className="flex items-start">
       <Link
         href={href}
-        className="underline-link flex items-center text-base-regular small:text-large-regular shadow rounded-sm gap-x-2 small:gap-x-4 py-2 transition-all duration-300 group px-4 "
+        className="underline-link flex items-center text-base-regular small:text-large-regular shadow-sm shadow-neutral-900 rounded-sm gap-x-2 small:gap-x-4 py-2 transition-all duration-300 group px-6 w-full"
       >
         <>
           <span>{children}</span>
